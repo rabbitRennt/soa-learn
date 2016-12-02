@@ -1,16 +1,15 @@
 package com.jumore.b2b.activity.admin.service;
 
 import com.jumore.b2b.activity.comm.Pages;
-import com.jumore.b2b.daren.model.TalentUser;
 
 @org.springframework.stereotype.Service
 public class TalentUserBizImpl implements ITalentUserBiz {
 
-	@Override
+	/*@Override
 	public Pages<?> selectPage(TalentUser user, int page, int rows) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 	/*@Resource
 	ITalentUserService talentUserService;

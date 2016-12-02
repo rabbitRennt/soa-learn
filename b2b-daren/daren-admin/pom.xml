@@ -21,11 +21,33 @@
 
 	<dependencies>
 
-	  	<dependency>
+	
+		<dependency>
 			<groupId>com.jumore.b2b.daren</groupId>
-			<artifactId>daren-service-basic-api</artifactId>
-			<version>${project.parent.version}</version>
+			<artifactId>daren-comm-test</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.jumore.b2b.daren</groupId>
+			<artifactId>daren-core-test</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>com.jumore.b2b.daren</groupId>
+			<artifactId>daren-io-test</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- 依赖dubbox aip -->
+		<dependency>
+			<groupId>com.jumore.b2b.daren</groupId>
+			<artifactId>daren-service-basic-api-test</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 
 		<!-- dubbo -->
 		<dependency>

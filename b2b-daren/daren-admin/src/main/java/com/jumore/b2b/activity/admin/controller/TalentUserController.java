@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jumore.b2b.activity.admin.base.BaseController;
 import com.jumore.b2b.activity.admin.service.ITalentUserBiz;
-import com.jumore.b2b.activity.comm.Pages;
+import com.jumore.b2b.activity.service.business.io.request.AppCustomerReq;
+import com.jumore.b2b.activity.service.business.io.response.AppCustomerRes;
 import com.jumore.b2b.daren.api.ITalentUserApi;
-import com.jumore.b2b.daren.model.TalentUser;
 
 /**
  * 用户详情
@@ -45,10 +45,17 @@ public class TalentUserController  extends BaseController{
 	 */
 	@RequestMapping(value = "/doBrowser.do")
 	@ResponseBody
-	public Object activityRule(Model model,TalentUser user) {
-		user= talentUserApi.selectUnique(user);
-		return user;
+	public Object activityRule(Model model,AppCustomerReq user) {
+		user.setCorpCode("1001");
+		try {
+			
+			AppCustomerRes res= talentUserApi.selectUnique(user);
+			return res;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		//return talentUserBiz.selectPage(user,page,rows);
+		return null;
 	};
 
 }
